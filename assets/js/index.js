@@ -1,6 +1,10 @@
 const tableData = document.getElementById("tableContent");
 const btnAddProduct = document.getElementById("addProduct");
 const modal = document.getElementById("modal");
+const productName = document.getElementById("productName");
+const productValue = document.getElementById("productValue");
+const productQuantity = document.getElementById("productQuantity");
+const btnSend = document.getElementById("send");
 
 const products = [
   {
@@ -61,3 +65,12 @@ function openModal() {
 }
 
 btnAddProduct.addEventListener("click", openModal);
+
+function addProduct() {
+  console.log(productName.value, productQuantity.value, productValue.value);
+}
+
+btnSend.addEventListener("click", (e) => {
+  e.preventDefault();
+  addProduct();
+});
